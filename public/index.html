@@ -1,0 +1,393 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Plotagem - Jump Label</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="./css/style.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="./css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<!-- lined-icons -->
+<link rel="stylesheet" href="./css/icon-font.min.css" type='text/css' />
+<!-- //lined-icons -->
+<!-- chart -->
+<script src="./js/Chart.js"></script>
+<!-- //chart -->
+<!--animate-->
+<link href="./css/animate.css" rel="stylesheet" type="text/css" media="all">
+
+
+<script src="./js/jquery-1.10.2.min.js"></script>
+<!-- Placed js at the end of the document so the pages load faster -->
+ <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 425px;
+      }
+
+    </style>
+</head> 
+   
+ <body class="sticky-header left-side-collapsed" onload="initMap()">
+    <section>
+    <!-- left side start-->
+		<div class="left-side sticky-left-side">
+
+			<!--logo and iconic logo start-->
+			<div class="logo">
+				<h1><a href="#">Jump <span>Label</span></a></h1>
+			</div>
+			<div class="logo-icon text-center">
+				<a href="index.html"><i class="lnr lnr-home"></i> </a>
+			</div>
+
+			<!--logo and iconic logo end-->
+			<div class="left-side-inner">
+
+				<!--sidebar nav start-->
+					<ul class="nav nav-pills nav-stacked custom-nav">
+						<li><a href="index.html"><i class="lnr lnr-power-switch"></i><span>Dashboard</span></a></li>
+						<!--
+						<li class="menu-list">
+							<a href="#"><i class="lnr lnr-cog"></i>
+								<span>Components</span></a>
+								<ul class="sub-menu-list">
+									<li><a href="grids.html">Grids</a> </li>
+									<li><a href="widgets.html">Widgets</a></li>
+								</ul>
+						</li>
+						<li><a href="forms.html"><i class="lnr lnr-spell-check"></i> <span>Forms</span></a></li>
+						<li class="active"><a href="tables.html"><i class="lnr lnr-menu"></i> <span>Tables</span></a></li>              
+						<li class="menu-list"><a href="#"><i class="lnr lnr-envelope"></i> <span>MailBox</span></a>
+							<ul class="sub-menu-list">
+								<li><a href="inbox.html">Inbox</a> </li>
+								<li><a href="compose-mail.html">Compose Mail</a></li>
+							</ul>
+						</li>  
+						<li class="menu-list"><a href="#"><i class="lnr lnr-indent-increase"></i> <span>Menu Levels</span></a>  
+							<ul class="sub-menu-list">
+								<li><a href="charts.html">Basic Charts</a> </li>
+							</ul>
+						</li>
+						<li><a href="codes.html"><i class="lnr lnr-pencil"></i> <span>Typography</span></a></li>
+						<li><a href="media.html"><i class="lnr lnr-select"></i> <span>Media Css</span></a></li>
+						<li class="menu-list"><a href="#"><i class="lnr lnr-book"></i>  <span>Pages</span></a> 
+							<ul class="sub-menu-list">
+								<li><a href="sign-in.html">Sign In</a> </li>
+								<li><a href="sign-up.html">Sign Up</a></li>
+								<li><a href="blank_page.html">Blank Page</a></li>
+							</ul>
+						</li>
+						-->
+					</ul>
+				<!--sidebar nav end-->
+			</div>
+		</div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+		<div class="main-content main-content4">
+			<!-- header-starts -->
+			<div class="header-section">
+			 
+			<!--toggle button start-->
+			<a class="toggle-btn  menu-collapsed"><i class="fa fa-bars"></i></a>
+			<!--toggle button end-->
+			<!--notification menu start -->
+			<div class="menu-right">
+				<div class="user-panel-top">  	
+					<div class="profile_details_left">
+						<ul class="nofitications-dropdown">
+							<li>
+								<img src="images/logo-jumplabel.png" style="width:70%; margin-top:-20px;">
+							</li>
+							<div class="clearfix"></div>	
+						</ul>
+					</div>
+					<div class="profile_details">		
+						<ul>
+							<li class="dropdown profile_details_drop">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									<div class="profile_img">	
+										<span style="background:url(images/logo-jumplabel.png) no-repeat center"> </span> 
+										 <div class="user-name">
+											<p>Rafael C.<span>Administrator</span></p>
+										 </div>
+										 <i class="lnr lnr-chevron-down"></i>
+										 <i class="lnr lnr-chevron-up"></i>
+										<div class="clearfix"></div>	
+									</div>	
+								</a>
+							</li>
+							<div class="clearfix"> </div>
+						</ul>
+					</div>		
+					    	
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<!--notification menu end -->
+			</div>
+		    
+			<br /><br />
+		    <form class="form-inline">
+
+			    <div class="form-group">
+					<div class="col-sm-4">
+							<select name="colaborador" id="colaborador" class="form-control1">
+								<option value="0">Selecione um Colaborador</option>
+								<option value="318065">ABELARDO GIL MOTA</option>
+								<option value="318085">ADAO RONIFON DOS SANTOS</option>
+								<option value="317876">ADILSON DOS REIS LOPES</option>
+								<option value="318913">ALAM APARECIDO DE OLIVEIRA</option>
+								<option value="280919">ALCINO PEREIRA MIRANDA</option>
+								<option value="318083">ALZIRO MORAIS DOS SANTOS</option>
+								<option value="153793">ANDERSON DA ROCHA TRINDADE</option>
+								<option value="313165">ANDRE DIAS</option>
+								<option value="318840">ANDRE FONTOURA DOS SANTOS</option>
+								<option value="195810">ANDRE LUIS ORTOLAN</option>
+								<option value="318073">ANDRE TRINDADE TOMAZINI</option>
+								<option value="296410">ANDREIA APARECIDA QUADRELI</option>
+								<option value="281123">ANDREIA DE SOUZA</option>
+								<option value="234742">ANTONIO JOSE PEREIRA</option>
+								<option value="315319">ANTONIO MARCOS CASTILHO</option>
+								<option value="316729">BRUNO HENRIQUE AP FELIX DE FREITAS</option>
+								<option value="318834">CARLOS ALEXANDRE BENICIO</option>
+								<option value="316776">CARLOS ROGERIO DE LIMA</option>
+								<option value="296436">CARLOS SANTOS RIBEIRO</option>
+								<option value="318060">CESAR HENRIQUE PEREIRA SANTOS</option>
+								<option value="264384">CLAUDECIR RODRIGO MANGINE</option>
+								<option value="246670">CLAUDINEI EVANGELISTA PEREIRA</option>
+								<option value="318817">DAMIAO DA SILVA RODRIGUES</option>
+								<option value="316924">DANIEL MOREIRA</option>
+								<option value="316151">DOUGLAS AUGUSTO CALDAS</option>
+								<option value="234767">EDINALDO MOREIRA DA SILVA</option>
+								<option value="45338">EDNA CORREIA DOS SANTOS</option>
+								<option value="317939">ELSON JUNIOR DA SILVA PROVAZI</option>
+								<option value="315004">ELVIS BATISTA DE BARROS</option>
+								<option value="314288">EVANDRO CARLOS FERREIRA</option>
+								<option value="196867">FABIO APARECIDO VICTALINO</option>
+								<option value="318854">FERNANDO WILLIAN FINCOLO</option>
+								<option value="172801">FLORISVALDO DA SILVA</option>
+								<option value="161382">FRANCIANA APARECIDA MARIANA DA SILVA</option>
+								<option value="195067">GILBERTO RIBEIRO SANTANA</option>
+								<option value="318816">GILMAR ADRIANO DOS SANTOS ANTUNES</option>
+								<option value="317999">JANUARIO FERREIRA DA SILVA</option>
+								<option value="316929">JOAO CARLOS ZARANTONELLI</option>
+								<option value="318830">JOHNNY SANTOS RUFINO</option>
+								<option value="316725">JOSE AILSON ZARANTONELLI DOS SANTOS</option>
+								<option value="127813">JOSE CARLOS SIQUEIRA</option>
+								<option value="318919">JOSIAS FERREIRA DA SILVA NETO</option>
+								<option value="123473">JULIO CEZAR THEODORO</option>
+								<option value="316159">JULIO OSMAR DE FIGUEIREDO</option>
+								<option value="318050">LUCAS MARCOS DE SOUZA</option>
+								<option value="306060">LUCIANA ANGELA DE SOUZA SILVA</option>
+								<option value="318846">LUCIO CLERISTON BEZERRA SOARES</option>
+								<option value="281081">MAGNA AUGUSTA DE SENE</option>
+								<option value="318829">MARCOS ANTONIO RAMOS</option>
+								<option value="105421">MARCOS ROGERIO LEPRE</option>
+								<option value="318049">MARIO CESAR DA SILVA</option>
+								<option value="316930">OLIVAL ALVES RIBEIRO</option>
+								<option value="47151">OSMAR FRANCISCO RODRIGUES</option>
+								<option value="171191">PAULO SERGIO BONONI</option>
+								<option value="224230">PAULO SERGIO FERREIRA</option>
+								<option value="250813">REGINALDO BELLETTI</option>
+								<option value="317872">REGINALDO DA ROCHA TRINDADE</option>
+								<option value="316673">REGINALDO PEREIRA DE CARVALHO</option>
+								<option value="317870">REGINALDO XAVIER DA SILVA</option>
+								<option value="318066">RODRIGO GREGORIO FLORIANO</option>
+								<option value="316973">ROGERIO ALVES FERREIRA</option>
+								<option value="209868">ROGERIO CORREA</option>
+								<option value="292872">ROSANGELA DO ROSARIO SOARES RODRIGUES</option>
+								<option value="317945">SEBASTIAO DO NASCIMENTO</option>
+								<option value="302259">SEBASTIAO LOURENCO DA SILVA</option>
+								<option value="317941">SEBASTIAO VERAS DE LIMA</option>
+								<option value="999999">SEM CADASTRO</option>
+								<option value="317875">VALDEMIR JOSE DOS SANTOS</option>
+								<option value="36501">VALDIR APOLINARIO DA PAIXAO</option>
+								<option value="293847">VILSON FAUSTINO</option>
+								<option value="318071">WILLIAN DA SILVA DIAS</option>
+								<option value="263824">WIVIANE ARCOVERDE DA SILVA</option>
+						</select>
+					</div>
+
+					<div class="col-sm-4">
+						<select name="data_evento" id="data_evento" class="form-control1" disabled>
+							<option value="0">Selecione uma Data</option>
+						</select>
+					</div>
+
+					<div class="col-sm-4">
+						<select name="atividade" id="atividade" class="form-control1" disabled>
+							<option>Selecione uma Atividade</option>
+						</select>
+					</div>
+				</div>
+	            <button class="btn btn-lg btn-primary" id="btnSubmit">Buscar</button>
+
+			</form>
+			<br />
+	
+		    <div id="map"></div>
+
+		    <div id="latitude"></div>
+		    <div id="longitude"></div>
+
+
+		<!--footer section start-->
+			<footer>
+			   <p>&copy 2019 <a href="" target="_blank">Jump Label</a></p>
+			</footer>
+        <!--footer section end-->
+	</section>
+	
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+
+   <script>
+
+      function initMap(coordernateArray, color) {
+   
+      	var flightPlanCoordinates;
+
+        if(coordernateArray){
+        	flightPlanCoordinates = coordernateArray;
+        }else{
+
+      	flightPlanCoordinates = [
+          {lat: -21.6112565, lng: -48.4593697} ];
+		}
+
+		var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: {lat: flightPlanCoordinates[0].lat, lng: flightPlanCoordinates[parseInt(flightPlanCoordinates.length / 2,10)].lng },
+          mapTypeId: 'satellite'
+        });
+
+        var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: ((!color) ? '#FF0000' : color),
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+
+		if(coordernateArray){
+    		flightPath.setMap(map);
+		}else{
+    		flightPath.setMap(null);
+		}
+      }
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCJJRQiresbZztVDjeRDCdTZx4b6QEFSs&callback=initMap">
+    </script>
+    <script>
+	  $(document).ready(function(){
+            var urlRequest= "http://ec2-3-81-67-253.compute-1.amazonaws.com:3000/maps";
+           	//var urlRequest = "http://localhost:3000/maps";
+
+           	$("#colaborador").on('change', function(e){
+           		e.preventDefault();
+
+           		var id = $(this).val();
+
+           		$("#atividade").attr('disabled', true);
+           		$("#data_evento").attr('disabled', true);
+
+           		$("#data_evento option").remove();
+           		$("#atividade option").remove();
+
+            	$("#data_evento").html('<option value="0">Carregando Datas...</option>');
+            	$("#atividade").html('<option value="0">Carregando Atividades...</option>');
+
+
+           		if( id > 0 ){
+
+           			$.ajax({
+									headers: {"Accept": "application/json"},
+									method: "GET",
+									crossDomain: true,
+									url: urlRequest + '/id/' + id ,
+									dataType: 'json',
+									success: function (result) {
+											$("#data_evento option").remove();
+											$("#atividade option").remove();
+
+											$("#data_evento").html('<option value="0">Selecione uma Data</option>');
+											$("#atividade").html('<option value="0">Selecione uma Atividade</option>');
+
+											if(!result || result.status == false){
+												alert('Nenhum dado foi encontrado');
+											}
+							
+											$.map(result.dateEvent, function(value) {
+													$("#data_evento").append("<option value=" + value + ">" + value + "</option>");
+											});
+
+											$.map(result.atividade, function(value) {
+													$("#atividade").append("<option value=" + value + ">" + value + "</option>");
+											});
+
+	                    }
+	                });
+
+           			$("#atividade").attr('disabled', false);
+           			$("#data_evento").attr('disabled', false);
+           		}
+
+           	});
+		
+			$("#btnSubmit").on('click', function(e){
+							e.preventDefault();
+							var coordernateArray = [];
+           		var id = $("#colaborador option:selected").val();
+           		var data_evento = $("#data_evento option:selected").val();
+           		var atividade = $("#atividade option:selected").val();
+           		var color = atividade == "PULVERIZAÇÃO" ? '#006400' : '#FF0000';
+
+           		if(!id || !data_evento || !atividade ){
+           			alert('Campos obrigatorios, preecher os campos para busca');
+           		}else{
+
+	       			$.ajax({
+	                    headers: {"Accept": "application/json"},
+	                    method: "POST",
+	                    crossDomain: true,
+	                    url: urlRequest + '/geolocation',
+	                    dataType: 'json',
+	                    data : { 'id': id, 'data_evento':data_evento, 'atividade':atividade },
+	                    success: function (result) {
+
+	                    	if(!result || !result.status){
+	                   			alert('Nenhum dado foi encontrado');
+	                    	}
+	                		
+												$.map(result.data, function(value) {
+													coordernateArray.push({"lat": value.latitude, "lng": value.longitude});
+												});
+
+												initMap(coordernateArray, color);
+
+	                    }
+	                });
+           		}
+
+           	});
+           
+       });
+
+    </script>
+</body>
+</html>
